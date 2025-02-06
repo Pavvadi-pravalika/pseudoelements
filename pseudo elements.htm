@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+     body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ff6347; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #ff6347;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.menu {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    overflow: hidden; 
+}
+
+.menu-item::before {
+    content: '🌟';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    transition: transform 0.3s ease; 
+}
+
+.menu-item:hover::before {
+    transform: scale(1.5); 
+}
+
+.menu-item::after {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #ff6347; 
+    margin-top: 10px;
+    transition: width 0.3s; 
+    width: 0; 
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+.price {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6347; 
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Delicious Restaurant</h1>
+        <p>Serving you the best dishes!</p>
+    </header>
+    <main>
+        <section class="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <h3>Pasta Primavera</h3>
+                <p>Fresh vegetables sautéed with pasta and a light olive oil sauce.</p>
+                <span class="price">$12.99</span>
+            </div>
+            <div class="menu-item">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza topped with fresh tomatoes, mozzarella, and basil.</p>
+                <span class="price">$10.99</span>
+            </div>
+            <div class="menu-item">
+                <h3>Grilled Salmon</h3>
+                <p>Succulent salmon grilled to perfection, served with seasonal vegetables.</p>
+                <span class="price">$15.99</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Delicious Restaurant. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
